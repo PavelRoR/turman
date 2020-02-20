@@ -1,0 +1,19 @@
+-var head_url = 'https://turman.info/404/';
+-var head_title = 'Нет такой страницы...';
+-var styles = '../css/styles.min.css';
+-var fav_ico = '../favicon.ico';
+-var fav_png = '../favicon.png';
+
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include pug/head
+		//- include pug/scripts/head_scripts
+	body
+		//- include pug/scripts/body_top_scripts
+		include pug/0.header-2.pug
+		section#404
+			.container
+				h1.main-title=head_title
+		include pug/scripts/body_bottom_scripts
