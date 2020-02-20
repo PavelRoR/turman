@@ -2,7 +2,7 @@ section#revs
 	.container
 		+gt('','Отзывы')
 		.owl-carousel.owl-theme#video-revs
-			each index in [1,2,3,4,5,6,7,8]
+			each yt,index in {1:'',2:'',3:'',4:'',5:'',6:'',7:'',8:''}
 				div
-					.video-wrapper.video-wrapper-rev
+					.video-wrapper.video-wrapper-rev(data-youyube=yt)
 						img(src="img/revs/video-"+index+".jpg", alt="Видео-отзыв "+index)
