@@ -1,0 +1,20 @@
+meta(charset="UTF-8")
+meta(name="viewport" content="width=device=width, initial-scale=1")
+meta(http-equiv="X-UA-Compatible" content="ie=edge")
+meta(property="og:type" content="website")
+if head_url
+	meta(property="og:url" content= head_url)
+meta(property="og:title" content= head_title)
+if head_description
+	meta(property="og:description" content= head_description)
+if head_img
+	meta(property="og:image" content= head_url+head_img)
+if fb_content
+	meta(property="fb:app_id" content= fb_content)
+if head_description
+	title= head_title + '.' + ' ' + head_description
+else
+	title= head_title
+link(rel="icon" type="image/x-icon" href= fav_ico)
+link(rel="shortcut icon" type="image/x-icon" href= fav_png)
+link(rel="stylesheet" href= styles)

@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Akrobat';
+    src: url('fonts/Akrobat.eot');
+    src: url('fonts/Akrobat.eot') format('embedded-opentype'),
+         url('fonts/Akrobat.woff2') format('woff2'),
+         url('fonts/Akrobat.woff') format('woff'),
+         url('fonts/Akrobat.ttf') format('truetype'),
+         url('fonts/Akrobat.svg#Akrobat') format('svg');
+}
