@@ -6,9 +6,7 @@
 $(document).ready(function () {
     $(function () {
         var check = $('.check', this),
-            email = $('.input-mail', this),
-            message = $('.alert-message', this),
-            button = $('.button-form', this);
+            email = $('.input-mail', this);
         $(".form").on("submit", function () {
             var check = $('.check', this),
                 message = $('.alert-message', this),
@@ -16,7 +14,7 @@ $(document).ready(function () {
                 email = $('.input-mail', this),
                 button = $('.button-form', this);
             if (!email.val().match(reNone)) {
-                message.text('Введите email').slideDown(500);
+                email.css('borderColor', 'red');
                 return false;
             }
             if (!check.prop("checked")) {
@@ -28,7 +26,6 @@ $(document).ready(function () {
                     'color': 'red',
                     'transition': 'all .4s ease'
                 });
-                message.text('Подтвердите соглашение').slideDown(500);
                 return false;
             }
             if (email.val() && check) {
@@ -40,19 +37,17 @@ $(document).ready(function () {
             }
         });
         email.click(function () {
-            // email.css({"borderColor": "rgb(25, 10, 12)",'transition':'all .4s ease'});
-            message.slideUp(500);
+            email.css({ "borderColor": "#fff", 'transition': 'all .4s ease' });
         });
         check.click(function () {
             check.next().css({
-                "color": "#000",
+                "color": "#c2c1c1",
                 'transition': 'all .4s ease'
             });
             check.next().children().css({
-                "color": "#000",
+                "color": "#c2c1c1",
                 'transition': 'all .4s ease'
             });
-            message.slideUp(500);
         });
     });
 
@@ -61,14 +56,14 @@ $(document).ready(function () {
         $('#video-revs').owlCarousel({
             slideSpeed: 200,
             paginationSpeed: 200,
-            items: 1,
+            items: 4,
             loop: true,
             margin: 20,
             nav: true,
             navText: ["‹", "›"],
-            dots: true
-            // autoHeightClass: 'owl-height',
-            // autoHeight: true
+            dots: false,
+            autoHeightClass: 'owl-height',
+            autoHeight: true
         });
     });
     $(function () {

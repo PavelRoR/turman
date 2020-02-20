@@ -1,0 +1,50 @@
+#author
+	padding 50px 0 0
+.general-title-author
+	text-align: left
+.author-text
+	margin-bottom: 27px
+	span
+		font-family: PTSB
+	&.author-text-bg 
+		font-family: PTSI
+.button-author
+	margin 0 auto 50px 0
+.author-img
+	display: block
+	width 100%
+	max-width 535px
+	margin 0 auto
+.performance-img-link
+	display: block
+	overflow hidden
+	position relative
+	margin 0 auto 32px
+	&:after
+		content: ''
+		position absolute
+		top 0
+		left 0
+		right 0
+		bottom: 0
+		width 100%
+		height inherit
+		background-color: rgba(#000,.55)
+		background-image url(../img/icons/lupe.png)
+		background-repeat no-repeat
+		background-position: center
+		transition: all .4s ease
+		opacity 0
+	&-3
+		.performance-img
+			height 632px
+			object-position: center
+	&:hover:after
+			opacity 1
+.performance-img
+	width 100%
+	object-fit: cover
+	object-position: center right
+	display: block
+	margin 0 auto
+	height 300px

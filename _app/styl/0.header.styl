@@ -1,0 +1,38 @@
+header
+	padding 5px 0
+	overflow hidden
+	position relative
+	&:before
+		content: ''
+		display: block
+		position absolute
+		top 0
+		right: -750px
+		height 50px
+		width 1000px
+		background-color: #96D3E8
+.contact
+	line-height: 15px
+	color #000
+	font-size: 15px
+	font-family: A
+	background-repeat no-repeat
+	background-position: left center
+	&&-email
+		padding-left: 25px
+		background-image url(../img/icons/envelope.png)
+	&&-phone
+		padding-left: 20px
+		background-image url(../img/icons/tube.png)
+		margin-left:  10px
+	&:focus
+		color #000
+		text-decoration: none
+	&:hover
+		color #000
+		text-decoration: underline
+.header-soc-buttons
+	position relative
+	text-align: right
+	img
+		vertical-align: sub

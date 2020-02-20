@@ -1,9 +1,9 @@
 section#main
 	.container
 		.row
-			.col-md-6.col-sm-6
+			.col-md-7.col-sm-7
 				a(href="/", target="_blank")
-					img.main-logo(src="img/images/logo.png" alt="Лого")
+					img.main-logo(src="img/images/logo.png" alt="Лого").main-logo
 				h1.main-title ТОП 3 Секрета упаковки бизнеса
 				h2.main-subtitle Как увеличить продажи минимум в 2 раза в 2020 году с помощью авторской системы от ведущего эксперта по разработке УТП и маркетинговой упаковке бизнеса
 				form(action="" method="post" enctype="application/x-www-form-urlencoded" accept-charset="UTF-8" ).form.form-main
@@ -24,8 +24,9 @@ section#main
 						input(type="hidden" value="0" id="form_newsletter_id_advertising_channel_page_1" name="Contact[id_advertising_channel_page]")
 						input(type="hidden" name="formId" value="257")
 						input(type="hidden" name="formVc" value="1280138588")
-			.col-md-6.col-sm-6
-				.video-wrapper.video-wrapper-main
-					iframe(src="https://youtube.com/embed/?autoplay=1&mute=1" allowfullscreen)
-				.main-img
-					img(src="img/images/turman.png", alt="Владимир Турман")
+			.col-md-5.col-sm-5
+				.main-right-col
+					.video-wrapper-main.video-wrapper
+						iframe(src="https://youtube.com/embed/?autoplay=1&mute=1" allowfullscreen)
+					.main-img
+						img(src="img/images/turman.png", alt="Владимир Турман")

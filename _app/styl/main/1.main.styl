@@ -1,0 +1,148 @@
+#main
+	padding 40px 0 60px
+	background-color: #3D2715
+	background-image url(../img/backs/main-bg.jpg)
+	background-repeat no-repeat
+	background-position: center
+	background-size: cover
+	color #fff
+.main-title
+	font-size: 65px;
+	font-family: PTSB
+	text-transform: uppercase;
+	line-height: 1.154;
+	margin 60px 0 40px
+.main-subtitle
+	font-size: 25px;
+	font-family: PTS
+	text-transform: uppercase;
+	line-height: 1.28;
+	margin-bottom: 50px
+.form
+	overflow hidden
+.input
+	border 1px solid #fff
+	border-radius: 5px;
+	width 100%
+	max-width: 304px;
+	height: 70px;
+	padding 19px 22px
+	background-color: transparent
+	line-height: 1.778;
+	&-mail
+		float left
+		margin-right: 10px
+@-webkit-keyframes autofill
+	to
+		color: #fff
+		background-color: transparent
+input:-webkit-autofill
+	-webkit-animation-name: autofill;
+	-webkit-animation-fill-mode: both;
+.alert-message {
+	clear both
+	display: none;
+	font-size: 16px;
+	padding-top: 10px;
+	line-height: 16px
+	color: #f00
+	text-align: center
+	font-family: OSB
+}
+.checking {
+	display: table;
+	width 100%
+	// max-width 515px
+	margin: 8px auto 0
+	text-align: left
+}
+
+.checking .check-label {
+	line-height: 31px;
+	cursor: pointer;
+	position: relative;
+	display: table-cell;
+	vertical-align: middle;
+	padding: 0 0 0 40px;
+	text-align: left;
+	font-size: 16px
+	color #c2c1c1
+}
+
+.checking .check-label a
+	text-decoration: underline
+	display: inline
+	color #c2c1c1
+	&:focus
+		text-decoration: underline
+		color #c2c1c1
+	&:hover
+		text-decoration: none
+		color #c2c1c1
+
+.checking .check-label:before {
+	content: '';
+	background-color: #FFDA3B
+	position: absolute;
+	left: 0;
+	top: 0
+	width: 31px;
+	height: 31px;
+	border-radius: 0
+}
+
+.checking .check-label:after {
+	content: '';
+	position: absolute;
+	left: 12px;
+	top: -10px;
+	width: 8px;
+	height: 14px;
+	background-color: transparent;
+	opacity: 0;
+	border-bottom: 3px solid #080808
+	border-right: 3px solid #080808
+	transform: rotate(41deg);
+	transition: all 0.5s ease;
+
+}
+
+.check {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	width: 0;
+	height 0;
+	border: 0;
+	left -99999px;
+}
+
+.check:checked + .check-label:before {
+	background-color: #FFDA3B
+
+}
+
+.check:checked + .check-label:after {
+	opacity: 1;
+	top: 7px;
+	-webkit-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+.button-form-main
+	margin-left: 0
+.main-right-col
+	position relative
+.video-wrapper-main
+	position: absolute
+	bottom: -150px
+	z-index 20
+.main-img
+	position: relative
+	bottom: -60px
+	right 50px
+	z-index 0
+	width 600px
+	overflow hidden
+	img
+		width 100%

@@ -1,0 +1,35 @@
+#talks
+	padding 50px 0
+.talk-item
+	box-shadow: 0 0 10px 2px rgba(#324d4b,.13)
+	overflow hidden
+	padding 25px
+	position relative
+	margin-bottom: 40px
+	&:before
+		content '“'
+		display: block
+		font-size: 400px
+		position absolute
+		opacity .1
+		left 0
+		top 100px
+		line-height 90px
+	&:after
+		content '“'
+		display: block
+		font-size: 400px
+		position absolute
+		opacity .1
+		right 0
+		bottom: 90px;
+		line-height: 90px;
+		transform: rotate(180deg);
+.talk-item-text
+	height 160px
+	margin-bottom: 20px
+.talk-item-cite
+	font-weight: bold
+	span
+		font-family: PTSI
+		display: block
