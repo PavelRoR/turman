@@ -1,0 +1,26 @@
+section#author
+	.container
+		.row
+			.col-md-6.col-sm-6
+				+gt('general-title-author','об авторе')
+				p.author-text
+					span Владимир В. Турман 
+					| – ведущий эксперт по отстройке от конкурентов, автор единственной в мире пошаговой методики разработки Уникального Торгового Предложения (УТП) и вывода бизнеса в бесконкурентное пространство. Тайный советник, который стоит за спиной большого количества успешных предпринимателей, бизнес-тренеров, коучей и консультантов. Только 7% его кейсов открыты широкой публике для изучения
+				p.author-text.author-text-bg Экспертиза – увеличение продаж и запуск проектов на высоко конкурентных рынках с помощью разработки УТП и маркетинговой (пере)упаковки бизнеса
+				p.author-text Новая книга Владимира Турмана «Прорыв: Убедить и продать» за два дня продаж стала бестселлером на Ozon.ru
+				+b('button-author')
+			.col-md-6.col-sm-6
+				img.author-img(src="img/images/author.jpg", alt="Владимир Турман")
+		+gt('general-title-author-performance','Владимир ТУРМАН выступает на многотысячныхаудиториях')
+		.row
+			.col-md-4.col-sm-4
+				each index in [1,2]
+					a(href="img/images/performance-img-"+index+".jpg").performance-img-link(class="performance-img-"+index)
+						img.performance-img-link(src="img/images/performance-img-"+index+".min.jpg" alt="Фото "+index)
+			.col-md-4.col-sm-4
+					a(href="img/images/performance-img-3.jpg").performance-img-link(class="performance-img-3")
+						img.performance-img-link(src="img/images/performance-img-3.min.jpg" alt="Фото 3")
+			.col-md-4.col-sm-4
+				each index in [4,5]
+					a(href="img/images/performance-img-"+index+".jpg").performance-img-link(class="performance-img-"+index)
+						img.performance-img-link(src="img/images/performance-img-"+index+".min.jpg" alt="Фото "+index)

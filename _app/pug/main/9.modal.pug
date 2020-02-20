@@ -1,0 +1,27 @@
+.modal.fade(tabindex="-1" role="dialog")#modal
+	.modal-dialog(role="document")
+		.modal-content.mail-modal-content
+			.modal-wrapper
+				button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+					span(aria-hidden="true") &times;
+				.modal-body
+					h3.modal-title Запишитесь сейчас!
+					form(action="" method="post" enctype="application/x-www-form-urlencoded" accept-charset="UTF-8" ).form.form-modal
+						.email-block.email-block-modal
+							input( type="hidden" value="1" name="required_fields[email]")
+							input(class="input input-mail input-mail-modal" name="Contact[email]" type="text" placeholder="Ваш email")
+						.button-wrapper
+							button(type="submit").button.button-form.button-modal Записаться
+						.clearfix
+						p.alert-message
+						.checking.checking-modal
+							input(type="checkbox" id="check-3" checked).check
+							label(for="check-3").check-label Я согласен с 
+								a(href="javascript:void(0);")(data-toggle="modal" data-target="#myPolitics")  условиями обработки персональных данных по 152 - Ф3
+						div(style="display: none;")
+							#formTypeSpecificVars(style="display: none;")
+								input(type="hidden" value="1114" id="form_newsletter_id_newsletter" name="Contact[id_newsletter]")
+							<!-- API код канала рекламы -->
+							input(type="hidden" value="0" id="form_newsletter_id_advertising_channel_page" name="Contact[id_advertising_channel_page]")
+							input(type="hidden" name="formId" value="257")
+							input(type="hidden" name="formVc" value="1280138588")
