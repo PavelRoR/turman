@@ -73,7 +73,21 @@ $(document).ready(function () {
             navText: ["‹", "›"],
             dots: false,
             autoHeightClass: 'owl-height',
-            autoHeight: true
+            autoHeight: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                480: {
+                    items: 2
+                },
+                767: {
+                    items: 3
+                },
+                992: {
+                    items: 4
+                }
+            }
         });
     });
     $(function () {
