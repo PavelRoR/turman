@@ -1,0 +1,27 @@
+-var head_url = 'https://turman.info/congratulations/';
+-var head_title = 'Поздравляю с успешной регистрацией';
+//- -var head_description = 'Приединяйтесь к нашему телеграмм чату';
+//- -var head_img = 'img/banner.jpg';
+-var styles = '../css/congratulations.min.css';
+-var fav_ico = 'f../avicon.ico';
+-var fav_png = '../favicon.png';
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include pug/head
+		//- include pug/scripts/head_scripts
+	body
+		//- include pug/scripts/body_top_scripts
+		include pug/0.header-2.pug
+		section#main.congratulations
+			.container
+				h1.main-title=head_title
+				.video-wrapper.video-wrapper-main
+					iframe(src="https://www.youtube.com/embed/-8YE_AvODdg?rel=0&mute=1&autoplay=1" allowfullscreen)
+				p.main-text Приединяйтесь к нашему 
+					span Telegram-чату
+				a.button.button-main(href="" target="_blank") Присоединиться
+		include pug/0.footer-2.pug
+		script(src="../js/congratulations.min.js")
+		include pug/scripts/body_bottom_scripts

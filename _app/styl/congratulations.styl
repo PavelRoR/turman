@@ -1,0 +1,104 @@
+@import '0.fonts'
+
+@import '../_css/bootstrap.min.css'
+
+@import '0.base'
+
+@import '0.header'
+#main.congratulations
+	padding 40px 0 60px
+	background-color: #3D2715
+	background-image url(../img/backs/main-bg.jpg)
+	background-repeat no-repeat
+	background-position: center
+	background-size: cover
+	color #fff
+	min-height calc(100vh - 162px)
+	text-align: center
+#error-page
+	padding 40px 0 60px
+	min-height calc(100vh - 162px)
+.main-title
+	font-size: 30px;
+	font-family: PTSB
+	text-transform: uppercase;
+	line-height: 1.154;
+	margin 0 0 40px
+.video-wrapper-main
+	max-width 650px
+.main-text
+	font-size: 22px
+	margin 25px 0
+	span
+		font-family PTSB
+@import 'main/8.footer'
+
+@media screen and (min-width 2295px)
+	body
+		font-size: 20px
+	.container
+		width 1400px
+	header:before
+		right calc(50% - 1620px)
+	#main.congratulations
+		padding-top: 120px
+@media screen and (max-width 1199px)
+	header:before
+		right calc(50% - 1400px)
+@media screen and (max-width 991px)
+	header:before
+		right calc(50% - 1290px)
+	.footer-logo
+		width 100%
+@media screen and (max-width 767px)
+	header
+	.header-soc-buttons
+		text-align: center
+	header:before
+		height 50%
+		left 0
+		right 0
+		width 100%
+		top auto
+		bottom: 0
+	#main
+		padding 40px 0
+	.footer-logo
+		width auto
+		display block
+		margin 0 auto 20px
+	.footer-soc-buttons
+		text-align: center
+	.footer-contacts
+		margin-bottom: 10px
+	.footer-text
+		font-size: 12px
+		margin-top: 10px
+		line-height: 1
+	footer
+		padding 15px 0
+	.contact-phone.footer-contact-phone
+		display: block
+		margin-bottom: 5px
+		&:last-of-type
+			margin-bottom: 0
+	.footer-contacts
+		max-width 113px
+@media screen and (max-width 485px)
+	#main
+		padding 30px 0
+	.main-title
+		font-size: 26px
+		margin-bottom: 15px
+	.footer-logo
+		max-width 150px
+@media screen and (max-width 385px)
+	.contact
+		display: inline-block
+	header:before
+		height 30px
+	.main-title
+		font-size: 22px
+	.main-text
+		font-size: 20px
+		margin 10px 0

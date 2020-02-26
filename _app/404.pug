@@ -1,6 +1,6 @@
 -var head_url = 'https://turman.info/404/';
 -var head_title = 'Нет такой страницы...';
--var styles = '../css/styles.min.css';
+-var styles = '../css/congratulations.min.css';
 -var fav_ico = '../favicon.ico';
 -var fav_png = '../favicon.png';
 
@@ -13,7 +13,9 @@ html(lang="ru")
 	body
 		//- include pug/scripts/body_top_scripts
 		include pug/0.header-2.pug
-		section#404
+		section#error-page
 			.container
 				h1.main-title=head_title
+		include pug/0.footer-2.pug
+		script(src="../js/congratulations.min.js")
 		include pug/scripts/body_bottom_scripts
