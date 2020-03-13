@@ -1,0 +1,44 @@
+-var head_url = 'https://turman.info/special-offer/';
+-var head_title = 'Руководство по УТП и продаже с 50% скидкой!';
+-var head_description = 'Спецпредложение от Владимира Турмана';
+-var styles = '../css/special-offer.min.css';
+-var fav_ico = '../favicon.ico';
+-var fav_png = '../favicon.png';
+
+mixin gt(cl,h3)
+	h3.general-title(class=cl)=h3
+mixin b(cl,href,p,target)
+	a.button(class=cl href=href target=target)=p
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include pug/head
+		//- include pug/scripts/head_scripts
+	body
+		//- include pug/scripts/body_top_scripts
+		include pug/0.header-2.pug
+		//- header.header-stick
+		//- 	.container
+		//- 		.row
+		//- 			.col-md-10.col-sm-10
+		//- 				.header-contacts
+		//- 					a.contact.contact-email(href="mailto:info@turman.info" target="_blank") info@turman.info
+		//- 					a.contact.contact-phone(href="callto:84993467946" target="_blank") 8/499/346-79-46
+		//- 			.col-md-2.col-sm-2
+		//- 				.header-soc-buttons
+		//- 					img(usemap="#header-soc-buttons" src="../img/icons/header-soc-buttons.png")
+		//- 					map(name="header-soc-buttons")
+		//- 						area(shape="rect" coords="0,0,8,15"  href="https://www.facebook.com/VladimirThurmanDS" target="_blank")
+		//- 						area(shape="rect" coords="9,0,31,15"  href="https://vk.com/thurman_guru_utp" target="_blank")
+		//- 						area(shape="rect" coords="33,0,49,15"  href="https://www.instagram.com/vladimirthurman.biz/?hl=ru" target="_blank")
+		//- 				//- .header-soc-buttons
+		//- 				//- 	a.header-cos-button.header-soc-button-fb(href="http://", target="_blank")
+		//- 				//- 	a.header-cos-button.header-soc-button-vk(href="http://", target="_blank")
+		//- 				//- 	a.header-cos-button.header-soc-button-insta(href="http://", target="_blank")
+		include pug/sp/1.main.pug
+		include pug/sp/2.second.pug
+		include pug/sp/3.revs.pug
+		include pug/0.footer-2.pug
+		include pug/sp/scripts.pug
+		include pug/scripts/body_bottom_scripts

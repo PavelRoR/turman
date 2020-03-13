@@ -2,6 +2,7 @@ header
 	padding 5px 0
 	overflow hidden
 	position relative
+	background-color #fff
 	&:before
 		content: ''
 		display: block
@@ -11,6 +12,15 @@ header
 		height 50px
 		width 1000px
 		background-color: #96D3E8
+	&.header-stick
+		display none
+		position fixed
+		z-index 999
+		box-shadow: 0 2px 6px rgba(0,0,0,.15)
+		top 0
+// .stickytop
+// 	position fixed
+// 	z-index 999 !important
 .contact
 	line-height: 15px
 	color #000

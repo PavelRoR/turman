@@ -1,0 +1,51 @@
+section#second
+	.container
+		+gt('','Спецпредложение: руководство по УТП и продаже с 50% скидкой!')
+		h4.timer-title Успейте сделать заказ по спец. условиям
+		.timer.main-timer
+			.timer-block
+				<div class="timer-block-counter count-houres"></div>
+				<p class="timer-block-name">Часов</p>
+			<div class="timer-divider">:</div>
+			<div class="timer-block">
+				<div class="timer-block-counter count-minutes"></div>
+				<p class="timer-block-name">Минут</p>
+			</div>
+			<div class="timer-divider">:</div>
+			<div class="timer-block">
+				<div class="timer-block-counter count-seconds"></div>
+				<p class="timer-block-name">Секунд</p>
+			</div>
+		p.second-text Получите руководство "Сначала продайте идею" по спец. условиям!
+		+b('button-second','','Получить')
+section#items
+	.container
+		.row
+			.col-md-4.col-sm-4
+				.second-item.second-item-1
+					p.second-item-text 
+						span Актуально
+						| любому бизнесу
+			.col-md-4.col-sm-4
+				.second-item.second-item-2
+					p.second-item-text 
+						span Выжимка
+						| полезной информации, без воды
+			.col-md-4.col-sm-4
+				.second-item.second-item-3
+					p.second-item-text 
+						span Методика 
+						| уже опробована нами и точно работает
+		.row
+			.col-md-4.col-sm-4.col-md-offset-2.col-sm-offset-2
+				.second-item.second-item-4
+					p.second-item-text 
+						span Этого контента 
+						| нет в открытом доступе
+			.col-md-4.col-sm-4
+				.second-item.second-item-5
+					p.second-item-text 
+						span Поможет вам 
+						| получить максимум от предстоящего вебинара
+		p.second-text Есть вопрос? Оставьте заявку, и мы ответим на все ваши вопросы
+		+b('','','Оставить заявку')
