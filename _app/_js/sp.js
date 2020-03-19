@@ -9,7 +9,7 @@ if (isIE) {
     var head = document.getElementsByTagName("head")[0];
     var link = document.createElement("link");
     link.rel = "stylesheet";
-    link.href = "css/styles-ie.min.css";
+    link.href = "../css/special-offer-ie.min.css";
     head.appendChild(link);
 }
 
@@ -28,47 +28,49 @@ $(document).ready(function () {
     })
     $(function () {
         var dateNow = new Date();
+        var Day = dateNow.getDate();
+        var Month = dateNow.getMonth();
         var monthNow;
-        switch (dateNow.getDay()) {
-            case 1:
+        switch (Month) {
+            case 0:
                 monthNow = 'января';
                 break;
-            case 2:
+            case 1:
                 monthNow = 'февраля';
                 break;
-            case 3:
+            case 2:
                 monthNow = 'марта';
                 break;
-            case 4:
+            case 3:
                 monthNow = 'Апреля';
                 break;
-            case 5:
+            case 4:
                 monthNow = 'мая';
                 break;
-            case 6:
+            case 5:
                 monthNow = 'июня';
                 break;
-            case 7:
+            case 6:
                 monthNow = 'июля';
                 break;
-            case 8:
+            case 7:
                 monthNow = 'августа';
                 break;
-            case 9:
+            case 8:
                 monthNow = 'сентября';
                 break;
-            case 10:
+            case 9:
                 monthNow = 'октября';
                 break;
-            case 11:
+            case 10:
                 monthNow = 'ноября';
                 break;
-            case 12:
+            case 11:
                 monthNow = 'декабря';
                 break;
         }
 
-        $('.today').html(dateNow.getDate() + ' ' + monthNow);
+        $('.today').html(Day + ' ' + monthNow);
     });
     $(function () {
         /* Таймер */
@@ -141,51 +143,51 @@ $(document).ready(function () {
         })();
     });
     /*Отзывы*/
-    $(function () {
-        $('#video-revs').owlCarousel({
-            slideSpeed: 200,
-            paginationSpeed: 200,
-            items: 4,
-            loop: true,
-            margin: 20,
-            nav: true,
-            navText: ["‹", "›"],
-            dots: false,
-            autoHeightClass: 'owl-height',
-            autoHeight: true,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                480: {
-                    items: 2
-                },
-                767: {
-                    items: 3
-                },
-                992: {
-                    items: 4
-                }
-            }
-        });
-    });
+    // $(function () {
+    //     $('#video-revs').owlCarousel({
+    //         slideSpeed: 200,
+    //         paginationSpeed: 200,
+    //         items: 4,
+    //         loop: true,
+    //         margin: 20,
+    //         nav: true,
+    //         navText: ["‹", "›"],
+    //         dots: false,
+    //         autoHeightClass: 'owl-height',
+    //         autoHeight: true,
+    //         responsive: {
+    //             0: {
+    //                 items: 1
+    //             },
+    //             480: {
+    //                 items: 2
+    //             },
+    //             767: {
+    //                 items: 3
+    //             },
+    //             992: {
+    //                 items: 4
+    //             }
+    //         }
+    //     });
+    // });
     /* Видео */
-    $(".video-wrapper-rev img").click(function () {
+    $(".video-wrapper-rev img, .video-wrapper-rev-item img").click(function () {
         var a = $(this).parent().attr("data-youtube");
         $(this).parent().html('<iframe src="https://www.youtube.com/embed/' + a + '?mute=1&autoplay=1&rel=0" allowfullscreen></iframe>')
     });
-    $(function () {
-        $('#video-revs .owl-prev, #video-revs .owl-next').click(function () {
-            $('.video-wrapper-rev iframe').each(function () {
-                var l = $(this).parent().attr('data-img');
-                $(this).parent().html('<img src="' + l + '" alt="Видео отзыв">');
-            });
-            $(".video-wrapper-rev img").click(function () {
-                var a = $(this).parent().attr("data-youtube");
-                $(this).parent().html('<iframe src="https://www.youtube.com/embed/' + a + '?mute=1&autoplay=1&rel=0" allowfullscreen></iframe>')
-            });
-        });
-    });
+    // $(function () {
+    //     $('#video-revs .owl-prev, #video-revs .owl-next').click(function () {
+    //         $('.video-wrapper-rev iframe').each(function () {
+    //             var l = $(this).parent().attr('data-img');
+    //             $(this).parent().html('<img src="' + l + '" alt="Видео отзыв">');
+    //         });
+    //         $(".video-wrapper-rev img").click(function () {
+    //             var a = $(this).parent().attr("data-youtube");
+    //             $(this).parent().html('<iframe src="https://www.youtube.com/embed/' + a + '?mute=1&autoplay=1&rel=0" allowfullscreen></iframe>')
+    //         });
+    //     });
+    // })
 
     /*Конец документа*/
 });

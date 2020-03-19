@@ -1,6 +1,7 @@
 section#second
 	.container
-		+gt('','Спецпредложение: руководство по УТП и продаже с 50% скидкой!')
+		h3.general-title.general-title-second Спецпредложение: руководство по УТП и продаже 
+			span со 50% скидкой!
 		h4.timer-title Успейте сделать заказ по спец. условиям
 		.timer.main-timer
 			.timer-block
@@ -16,8 +17,10 @@ section#second
 				<div class="timer-block-counter count-seconds"></div>
 				<p class="timer-block-name">Секунд</p>
 			</div>
-		p.second-text Получите руководство "Сначала продайте идею" по спец. условиям!
-		+b('button-second','','Получить')
+		p.second-text Получите руководство "Сначала продайте идею" по спец. условиям
+		p.cost.cost-full 6 000р.
+		p.cost.cost-sale 3 000р.
+		+b('button-second','https://shop.mv-centr.ru/?r=ordering/cart/as1&id=92&clean=true&lg=ru','Получить')
 section#items
 	.container
 		.row
@@ -48,4 +51,4 @@ section#items
 						span Поможет вам 
 						| получить максимум от предстоящего вебинара
 		p.second-text Есть вопрос? Оставьте заявку, и мы ответим на все ваши вопросы
-		+b('','','Оставить заявку')
+		+b('','https://shop.mv-centr.ru/?r=ordering/cart/as1&id=92&clean=true&lg=ru','Оставить заявку')

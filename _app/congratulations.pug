@@ -13,7 +13,7 @@ html(lang="ru")
 		//- include pug/scripts/head_scripts
 	body
 		//- include pug/scripts/body_top_scripts
-		include pug/0.header-2.pug
+		include pug/0.header.pug
 		section#main.congratulations
 			.container
 				h1.main-title=head_title
@@ -22,6 +22,6 @@ html(lang="ru")
 				p.main-text Приединяйтесь к нашему 
 					span Telegram-чату
 				a.button.button-main(href="https://t.me/thurmanbiz" target="_blank") Присоединиться
-		include pug/0.footer-2.pug
+		include pug/main/8.footer.pug
 		script(src="../js/congratulations.min.js")
 		include pug/scripts/body_bottom_scripts
