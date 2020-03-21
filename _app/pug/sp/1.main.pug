@@ -4,6 +4,31 @@ section#main
 			span Внимание! 
 			|  Предложение на этой странице действительно только сегодня. Из-за возросшего спроса мы не можем гарантировать сохранение данных условий после 
 			span.today
-		h2.main-subtitle Смотрите это короткое видео
-		.video-wrapper.video-wrapper-main
-			iframe(src="https://youtube.com/embed/VFpfmCTmLAI?mute=1&autoplay=1")
+		.row
+			.col-md-6.col-sm-6
+				h2.main-subtitle Смотрите это короткое видео
+				.video-wrapper.video-wrapper-main
+					iframe(src="https://youtube.com/embed/VFpfmCTmLAI?mute=1&autoplay=1")
+			.col-md-6.col-sm-6
+				h3.main-subtitle Спецпредложение: руководство по УТП и продаже 
+					span со 50% скидкой!
+				h4.timer-title Успейте сделать заказ по спец. условиям
+				.timer.main-timer
+					.timer-block
+						<div class="timer-block-counter count-houres"></div>
+						<p class="timer-block-name">Часов</p>
+					<div class="timer-divider">:</div>
+					<div class="timer-block">
+						<div class="timer-block-counter count-minutes"></div>
+						<p class="timer-block-name">Минут</p>
+					</div>
+					<div class="timer-divider">:</div>
+					<div class="timer-block">
+						<div class="timer-block-counter count-seconds"></div>
+						<p class="timer-block-name">Секунд</p>
+					</div>
+				p.second-text Получите руководство "Сначала продайте идею" по спец. условиям
+				.costs
+					p.cost.cost-full 6 000р.
+					p.cost.cost-sale 3 000р.
+				+b('','https://shop.mv-centr.ru/?r=ordering/cart/as1&id=92&clean=true&lg=ru','Получить')
