@@ -1,0 +1,250 @@
+@import '0.fonts'
+
+@import '../_css/bootstrap.min.css'
+@import '../_css/intlTelInput.min.css'
+
+@import '0.base'
+
+@import '0.header'
+
+#main
+	padding 50px 0
+	background-color: #3D2715
+	background-image linear-gradient(0deg, #0F0402 0%, rgba(#52311A,0) 50%),url(../img/backs/main-bg.jpg)
+	background-repeat no-repeat
+	background-position: center
+	background-size: cover
+	color #fff
+	text-align: center
+	min-height calc(100vh - 162px)
+.main-title
+	font-size:40 px;
+	font-family: PTSB
+	text-transform: uppercase;
+	line-height: 1.154;
+	font-weight: bold
+	small
+		color red
+		display block
+		font-size: 20px
+		text-transform: none
+.main-subtitle
+	font-size: 30px;
+	font-family: PTSB
+	font-weight: bold
+	text-transform: uppercase;
+	line-height: 1.28;
+	margin-bottom: 20px
+	span
+		display: block
+		color red
+.main-info
+	font-size: 20px
+	margin 20px 0 30px
+	span
+		display inline-block
+		font-size: 22px
+		font-family: PTSB
+		font-weight: bold
+.input
+	border 1px solid #fff
+	border-radius: 5px;
+	width 100%
+	max-width: 350px;
+	height: 70px;
+	padding 19px 22px
+	background-color: transparent
+	line-height: 1.778;
+	display block
+	margin 0 auto 10px
+.inputrow
+	width 100%
+	max-width: 350px;
+	margin 0 auto 10px
+.intl-tel-input
+	display block
+@-webkit-keyframes autofill
+	to
+		color: #fff
+		background-color: transparent
+input:-webkit-autofill
+	-webkit-animation-name: autofill;
+	-webkit-animation-fill-mode: both;
+.alert-message {
+	clear both
+	display: none;
+	font-size: 16px;
+	padding-top: 10px;
+	line-height: 16px
+	color: #f00
+	text-align: center
+	font-family: OSB
+}
+.checking {
+	display: table;
+	width 100%
+	max-width 350px
+	margin: 8px auto 0
+	text-align: left
+}
+
+.checking .check-label {
+	line-height: 16px;
+	cursor: pointer;
+	position: relative;
+	display: table-cell;
+	vertical-align: middle;
+	padding: 0 0 0 40px;
+	text-align: left;
+	font-size: 14px
+	color #c2c1c1
+}
+
+.checking .check-label a
+	text-decoration: underline
+	display: inline
+	color #c2c1c1
+	&:focus
+		text-decoration: underline
+		color #c2c1c1
+	&:hover
+		text-decoration: none
+		color #c2c1c1
+
+.checking .check-label:before {
+	content: '';
+	background-color: #FFDA3B
+	position: absolute;
+	left: 0;
+	top: 0
+	width: 31px;
+	height: 31px;
+	border-radius: 0
+}
+
+.checking .check-label:after {
+	content: '';
+	position: absolute;
+	left: 12px;
+	top: -10px;
+	width: 8px;
+	height: 14px;
+	background-color: transparent;
+	opacity: 0;
+	border-bottom: 3px solid #080808
+	border-right: 3px solid #080808
+	transform: rotate(41deg);
+	transition: all 0.5s ease;
+
+}
+
+.check {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	width: 0;
+	height 0;
+	border: 0;
+	left -99999px;
+}
+
+.check:checked + .check-label:before {
+	background-color: #FFDA3B
+
+}
+
+.check:checked + .check-label:after {
+	opacity: 1;
+	top: 7px;
+	-webkit-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+.button
+	max-width 350px
+@import 'main/8.footer'
+@import 'main/10.politics'
+
+@media screen and (min-width 2295px)
+	body
+		font-size: 20px
+	.container
+		width 1400px
+	#main
+		padding-top: 100px
+	header:before
+		right calc(50% - 1620px)
+	footer
+		font-size: 16px
+@media screen and (max-width 1199px)
+	header:before
+		right calc(50% - 1400px)
+@media screen and (max-width 991px)
+	header:before
+		right calc(50% - 1290px)
+	.footer-logo
+		width 100%
+	#myPolitics .modal-dialog
+		width auto
+		margin 20px
+@media screen and (max-width 767px)
+	header
+	.header-soc-buttons
+		text-align: center
+	header:before
+		height 50%
+		left 0
+		right 0
+		width 100%
+		top auto
+		bottom: 0
+	#main
+		padding 40px 0
+	.footer-logo
+		width auto
+		display block
+		margin 0 auto 20px
+	.footer-contacts
+		margin-bottom: 10px
+	.footer-text
+		font-size: 12px
+		margin-top: 10px
+		line-height: 1
+	footer
+		padding 15px 0
+	.footer-soc-buttons
+		text-align: center
+	.contact-phone.footer-contact-phone
+		display: block
+		margin-bottom: 5px
+		&:last-of-type
+			margin-bottom: 0
+	.footer-contacts
+		max-width 113px
+@media screen and (max-width 485px)
+	.main-logo
+		width 100%
+		max-width 120px
+		margin 0 auto
+	.main-title
+		font-size: 30px
+	.main-subtitle
+		font-size: 22px
+	.footer-logo
+		max-width 150px
+	#myPolitics .modal-dialog
+		margin 10px
+@media screen and (max-width 385px)
+	.contact
+		display: inline-block
+	header:before
+		height 30px
+	#main
+		padding 30px 0
+	.main-title
+		font-size: 26px
+	.main-subtitle
+		font-size: 20px
+	.main-info
+		font-size: 18px
+		margin 10px 0 20px

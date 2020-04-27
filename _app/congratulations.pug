@@ -3,16 +3,16 @@
 //- -var head_description = 'Приединяйтесь к нашему телеграмм чату';
 //- -var head_img = 'img/banner.jpg';
 -var styles = '../css/congratulations.min.css';
--var fav_ico = 'f../avicon.ico';
+-var fav_ico = '../favicon.ico';
 -var fav_png = '../favicon.png';
 
 <!DOCTYPE html>
 html(lang="ru")
 	head
 		include pug/head
-		//- include pug/scripts/head_scripts
+		include pug/scripts/head_scripts
 	body
-		//- include pug/scripts/body_top_scripts
+		include pug/scripts/body_top_scripts
 		include pug/0.header.pug
 		section#main.congratulations
 			.container
@@ -21,7 +21,7 @@ html(lang="ru")
 					iframe(src="https://www.youtube.com/embed/-8YE_AvODdg?rel=0&mute=1&autoplay=1" allowfullscreen)
 				p.main-text Приединяйтесь к нашему 
 					span Telegram-чату
-				a.button.button-main(href="https://t.me/thurmanbiz" target="_blank") Присоединиться
+				a.button.button-main(href="https://tlgg.ru/thurmanbiz" target="_blank") Присоединиться
 		include pug/main/8.footer.pug
 		script(src="../js/congratulations.min.js")
 		include pug/scripts/body_bottom_scripts

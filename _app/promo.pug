@@ -1,0 +1,49 @@
+-var head_title = 'Заполните данные для завершения регистрации';
+-var styles = '../css/promo.min.css';
+-var fav_ico = '../favicon.ico'
+-var fav_png = '../favicon.png'
+-var date = 'с 12 по 14 мая, в 19:00 (мск)'
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include pug/head
+		include pug/scripts/head_scripts
+	body
+		include pug/scripts/body_top_scripts
+		include pug/0.header.pug
+		section#main.congratulations
+			.container
+				h1.main-title
+					small мастер-класс
+					| "ТОП-3 СЕКРЕТА УПАКОВКИ БИЗНЕСА"
+				p.main-info Даты проведения: 
+					span=date
+				h2.main-subtitle Заполните данные для 
+					span завершения регистрации
+				form(action="https://shop.mv-centr.ru/?r=personal/newsletter/data/add&id=25863&lg=ru" method="post" enctype="application/x-www-form-urlencoded" accept-charset="UTF-8" ).form.form-promo
+					.name-block
+						input(type="hidden" value="1" name="required_fields[name]")
+						input(class="input input-name" placeholder="Имя" name="Contact[name]" type="text")
+					.inputrow
+						.inputblock
+							input(type="hidden" value="1" name="required_fields[phone_number]")
+							input(class="input input-mail" name="Contact[phone_number]" type="text" placeholder="Телефон")
+					button(type="submit").button.button-form Я участвую!
+					.clearfix
+					p.alert-message
+					.checking
+						input(type="checkbox" id="check" checked).check
+						label(for="check").check-label Я согласен с 
+							a(href="javascript:void(0);")(data-toggle="modal" data-target="#myPolitics")  условиями обработки персональных данных
+							|  по 152 - Ф3
+					div(style="display: none;")
+						div#formTypeSpecificVars(style="display: none;")
+						<!-- API код канала рекламы --> 
+						input(type="hidden" value="0" name="Contact[id_advertising_channel_page]")#form_newsletter_id_advertising_channel_page
+						input(type="hidden" name="formId" value="57")
+						input(type="hidden" name="formVc" value="2634719474")
+		include pug/main/8.footer.pug
+		include pug/main/10.politics.pug
+		script(src="../js/promo.min.js")
+		include pug/scripts/body_bottom_scripts

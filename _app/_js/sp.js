@@ -114,31 +114,31 @@ $(document).ready(function () {
                 seconds.innerText = '00';
             }
             var timeCount = setTimeout(function () {
-                diffSecondes--;
-                seconds.innerHTML = diffSecondes;
-                if (diffSecondes < 10) {
-                    seconds.innerHTML = '0' + diffSecondes
-                }
-                if (diffSecondes < 0) {
-                    diffSecondes = 59,
-                        seconds.innerHTML = diffSecondes;
-                    diffMinutes--;
-                    minutes.innerHTML = diffMinutes;
-                    if (diffMinutes < 10) {
-                        minutes.innerHTML = '0' + diffMinutes;
+                    diffSecondes--;
+                    seconds.innerHTML = diffSecondes;
+                    if (diffSecondes < 10) {
+                        seconds.innerHTML = '0' + diffSecondes
                     }
-                    if (diffMinutes < 0) {
-                        minutes.innerHTML = '59';
-                        diffHoures--
-                        houres.innerHTML = diffHoures;
+                    if (diffSecondes < 0) {
+                        diffSecondes = 59,
+                            seconds.innerHTML = diffSecondes;
+                        diffMinutes--;
+                        minutes.innerHTML = diffMinutes;
+                        if (diffMinutes < 10) {
+                            minutes.innerHTML = '0' + diffMinutes;
+                        }
+                        if (diffMinutes < 0) {
+                            minutes.innerHTML = '59';
+                            diffHoures--
+                            houres.innerHTML = diffHoures;
+                        }
+                        if (diffHoures < 0) {
+                            diffHoures = 23;
+                            houres.innerHTML = diffHoures
+                        }
                     }
-                    if (diffHoures < 0) {
-                        diffHoures = 23;
-                        houres.innerHTML = diffHoures
-                    }
-                }
-                timer();
-            },
+                    timer();
+                },
                 1000);
         })();
     });

@@ -5,6 +5,7 @@
 -var styles = 'css/styles.min.css';
 -var fav_ico = 'favicon.ico';
 -var fav_png = 'favicon.png';
+-var date = 'с 12 по 14 мая, в 19:00 (мск)'
 
 mixin gt(cl,h3)
 	h3.general-title(class=cl)=h3
@@ -15,9 +16,9 @@ mixin b(cl)
 html(lang="ru")
 	head
 		include pug/head
-		//- include pug/scripts/head_scripts
+		include pug/scripts/head_scripts
 	body
-		//- include pug/scripts/body_top_scripts
+		include pug/scripts/body_top_scripts
 		include pug/0.header.pug
 		include pug/main/1.main.pug
 		include pug/main/2.why.pug
